@@ -1,0 +1,55 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<br/>
+<a routerLink = "new-cmp">New component</a>
+<router-outlet></router-outlet>
+<br/>
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title}}!
+    
+  </h1>
+  <button (click)="showdate()">date </button>
+  <h3>Current TimeStamp is : {{message}}</h3>
+  <h2>Date is : {{todaydate}}</h2>
+  Months : <select (change)="changeMonths($event,months)">
+    <option *ngFor="let i of months"> {{i}}</option>
+  </select>
+
+
+<app-product></app-product>
+<div>
+  <span *ngIf = "isavailable;then condition1 else condition2">
+    condition is valid 
+  </span>
+  <ng-template #condition1>
+    Condition is valid from template
+  </ng-template>
+
+<ng-template #condition2>
+    Condition is in-valid from template
+  </ng-template>
+</div>
+
+<p>Hip!</p>
+<ng-template>
+  <p>Hip!</p>
+</ng-template>
+<p>Hooray!</p>
+
+<br/>
+<button (click)="myFunction($event)">Click Me </button>
+<br/>
+<h1>Custom Pipe</h1>
+<b> Sqrt of 25 is : {{25 | sqrt}}</b>
+<br/> <br/>
+
+<div style="text-align:center">
+  <span changeText >This is a custom attribute directive.</span>
+</div>
+
+</div>
+<ul *ngFor = "let data of httpdata">
+   <li>Name : {{data.name}} ; Address: {{data.address.city}}</li>
+</ul>
+
+
